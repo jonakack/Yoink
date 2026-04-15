@@ -1,0 +1,3 @@
+101 RCDATA "..\\bin\\yt-dlp.exe"
+102 RCDATA "..\\bin\\ffmpeg.exe"
+IDI_ICON1 ICON "..\\bin\\icon.ico"

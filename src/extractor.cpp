@@ -51,7 +51,7 @@ static bool extractResource(int id, const std::string& destPath)
 // ----------------------------------------------------------------
 bool Extractor::extractTools()
 {
-    // Get the system temp folder e.g. C:\Users\jonte\AppData\Local\Temp
+    // Get the system temp folder e.g. C:\Users\xxx\AppData\Local\Temp
     char tempPath[MAX_PATH];
     GetTempPathA(MAX_PATH, tempPath);
 
@@ -59,7 +59,6 @@ bool Extractor::extractTools()
     char uniquePath[MAX_PATH];
     GetTempFileNameA(tempPath, "yoink", 0, uniquePath);
 
-    // GetTempFileNameA creates a file — delete it and make a folder instead
     DeleteFileA(uniquePath);
     CreateDirectoryA(uniquePath, nullptr);
 
